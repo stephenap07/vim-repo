@@ -1,0 +1,6 @@
+[submodule ".vim/bundle/vim-colors-solarized"]
+	path = .vim/bundle/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule ".vim/bundle/EasyGrep"]
+	path = .vim/bundle/EasyGrep
+	url = https://github.com/vim-scripts/EasyGrep.git
