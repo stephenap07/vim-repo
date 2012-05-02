@@ -22,6 +22,7 @@ filetype plugin on
 set nocompatible
 set number
 
+" Wildmenu autocompleting coolness
 set wildmenu
 
 " Leader key is comma
