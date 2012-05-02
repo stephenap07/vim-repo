@@ -1,6 +1,0 @@
-[submodule "vim-colors-solarized"]
-	path = vim-colors-solarized
-	url = /home/stephen/vimrepo/.vim/bundle/vim-colors-solarized/
-[submodule "EasyGrep"]
-	path = EasyGrep
-	url = /home/stephen/vimrepo/.vim/bundle/EasyGrep
