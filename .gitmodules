@@ -1,0 +1,6 @@
+[submodule "vim-colors-solarized"]
+	path = vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git/
+[submodule "EasyGrep"]
+	path = EasyGrep
+	url = https://github.com/vim-scripts/EasyGrep.git
