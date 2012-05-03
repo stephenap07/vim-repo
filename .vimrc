@@ -45,3 +45,33 @@ if has('gui_running')
     set background=dark
     colorscheme solarized
 endif
+
+"" Keep  a minimum of 7 lines above and below the cursor when possible
+let &scrolloff=7-&scrolloff
+
+"" Display Character Hex Value in Ruler
+set rulerformat=%15(%c,%l\ \\\x%B%)
+
+"" When a bracket is inserted, briefly jump to the matching one
+set showmatch
+
+"" Highlight redudant whitespaces
+highlight RedundantSpaces ctermbg=gray guibg=gray
+match RedundantSpaces /\s+$| +\ze\t/
+
+" Command / Key Behavior
+
+"" Allow backspacing over autoindent, line breaks, start of insert
+set backspace=indent,eol,start
+
+"" Allow  arrow keys to wrap at eol
+set whichwrap=<,>
+
+"" Make # comment out current line in command mode
+" this is perl specific
+map # 0i#<ESC>j
+
+"" Allow page up/down to move position when less than full page is available
+map <ESC>[5~ <C-U>
+
+
