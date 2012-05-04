@@ -31,6 +31,9 @@ let mapleader = ","
 " map vimrc
 nmap <silent><leader>ev :e ~/.vimrc<CR>
 
+" map nerdtree
+nnoremap <silent><leader>nt :NERDTreeToggle<CR>
+
 " auto updating of vimrc
 if has("autocmd")  
   autocmd bufwritepost .vimrc source ~/.vimrc
