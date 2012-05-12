@@ -44,8 +44,8 @@ if has('gui_running')
   colorscheme solarized
   set background=dark
   else
-    set t_Co=256
     set background=dark
+    let g:solarized_termcolors=256
     colorscheme solarized
 endif
 
@@ -77,4 +77,7 @@ map # 0i#<ESC>j
 "" Allow page up/down to move position when less than full page is available
 map <ESC>[5~ <C-U>
 
+"" Omnicomplete settings
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 
+"" Future comment
