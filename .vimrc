@@ -7,10 +7,11 @@ endif
 " Pathogen calls
 call pathogen#infect()
 
-" Some simple properties
+" Indenting, formatting
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
+set cinkeys=0{,0},:,0#,!,!^F
 set smarttab
 set smartindent
 set expandtab
@@ -49,6 +50,18 @@ if has('gui_running')
     colorscheme solarized
 endif
 
+<<<<<<< HEAD
+=======
+" reload 
+command! -bar Cr silent ChromeReload
+
+
+" Show numbers to the side
+" set number
+
+" Interface / Highlighting
+
+>>>>>>> 7655755bcdc8ec100de9cbc3408b7470418272d5
 "" Keep  a minimum of 7 lines above and below the cursor when possible
 let &scrolloff=7-&scrolloff
 
