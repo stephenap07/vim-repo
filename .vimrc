@@ -41,12 +41,11 @@ endif
 
 " Colors
 if has('gui_running')
-  colorscheme solarized
+  colorscheme wombat
   set background=dark
   else
     set t_Co=256
-    set background=dark
-    colorscheme solarized
+    colorscheme wombat256mod
 endif
 
 "" Keep  a minimum of 7 lines above and below the cursor when possible
