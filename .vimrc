@@ -42,12 +42,17 @@ endif
 
 " Colors
 if has('gui_running')
-  colorscheme solarized
+  colorscheme wombat
   set background=dark
   else
+<<<<<<< HEAD
     set background=dark
     let g:solarized_termcolors=256
     colorscheme solarized
+=======
+    set t_Co=256
+    colorscheme wombat256mod
+>>>>>>> work
 endif
 
 <<<<<<< HEAD
