@@ -76,4 +76,5 @@ map # 0i#<ESC>j
 "" Allow page up/down to move position when less than full page is available
 map <ESC>[5~ <C-U>
 
-
+au BufRead,BufNewFile *.confl set filetype=confluence
+au! Syntax confluence source ~/.vim/confluencewiki.vim 
