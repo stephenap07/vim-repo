@@ -7,10 +7,11 @@ endif
 " Pathogen calls
 call pathogen#infect()
 
-" Some simple properties
+" Indenting, formatting
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
+set cinkeys=0{,0},:,0#,!,!^F
 set smarttab
 set smartindent
 set expandtab
@@ -44,9 +45,18 @@ if has('gui_running')
   colorscheme wombat
   set background=dark
   else
-    set t_Co=256
+    set background=dark 
     colorscheme wombat256mod
 endif
+
+" reload 
+command! -bar Cr silent ChromeReload
+
+
+" Show numbers to the side
+" set number
+
+" Interface / Highlighting
 
 "" Keep  a minimum of 7 lines above and below the cursor when possible
 let &scrolloff=7-&scrolloff
@@ -78,3 +88,6 @@ map <ESC>[5~ <C-U>
 
 au BufRead,BufNewFile *.confl set filetype=confluence
 au! Syntax confluence source ~/.vim/confluencewiki.vim 
+"" Omnicomplete settings
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+
