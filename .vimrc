@@ -45,8 +45,9 @@ if has('gui_running')
   colorscheme wombat
   set background=dark
   else
-    set background=dark 
-    colorscheme wombat256mod
+    set background=dark
+    let g:solarized_termcolors=256
+    colorscheme solarized
 endif
 
 " reload 
