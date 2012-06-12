@@ -29,6 +29,14 @@ set wildmenu
 " Leader key is comma
 let mapleader = ","
 
+" folding settings
+set foldmethod=indent "fold based on indent
+set foldnestmax=10    "deepest fold is 10 levels 
+set nofoldenable      "don't fold by default 
+set foldlevel=1       "this is just what i use 
+
+nmap <silent><leader>zM :fold<CR>
+nmap <silent><leader>zR :foldopen<CR>
 " map vimrc
 nmap <silent><leader>ev :e ~/.vimrc<CR>
 
@@ -46,8 +54,8 @@ if has('gui_running')
   set background=dark
   else
     set background=dark
-    let g:solarized_termcolors=256
-    colorscheme solarized
+    set t_Co=256
+    colorscheme wombat256mod
 endif
 
 " reload 
