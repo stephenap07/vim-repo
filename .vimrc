@@ -29,6 +29,14 @@ set wildmenu
 " Leader key is comma
 let mapleader = ","
 
+" folding settings
+set foldmethod=indent "fold based on indent
+set foldnestmax=10    "deepest fold is 10 levels 
+set nofoldenable      "don't fold by default 
+set foldlevel=1       "this is just what i use 
+
+nmap <silent><leader>zM :fold<CR>
+nmap <silent><leader>zR :foldopen<CR>
 " map vimrc
 nmap <silent><leader>ev :e ~/.vimrc<CR>
 
@@ -86,7 +94,8 @@ map # 0i#<ESC>j
 "" Allow page up/down to move position when less than full page is available
 map <ESC>[5~ <C-U>
 
+au BufRead,BufNewFile *.confl set filetype=confluence
+au! Syntax confluence source ~/.vim/confluencewiki.vim 
 "" Omnicomplete settings
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 
-"" Future comment

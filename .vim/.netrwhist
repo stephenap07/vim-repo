@@ -1,11 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/opt/DOCS/TheHole/DgnProjTracking/InProcessCADFiles'
-let g:netrw_dirhist_2='/opt/DOCS/TheHole'
-let g:netrw_dirhist_3='/opt/DOCS'
-let g:netrw_dirhist_4='/opt'
-let g:netrw_dirhist_5='/'
-let g:netrw_dirhist_6='/opt/DOCS/common/app/cms/priv/pmlib/CM/ServiceBulletin'
-let g:netrw_dirhist_7='/opt/DOCS/common/javascript/scriptaculous'
-let g:netrw_dirhist_8='/opt/DOCS/common/graphics/jquery-ui'
-let g:netrw_dirhist_9='/usr/share/vim/vim72/colors'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/opt/DOCS/common/pmlib/DOCS/Customer'
+let g:netrw_dirhist_2='/opt/DOCS/common/pmlib/DOCS/MilepostFormatter'
+let g:netrw_dirhist_3='/imports/home/spridham/vim-repo/.vim/colors'

@@ -1,5 +1,4 @@
-" Vim color file
-" Original Maintainer:  Lars H. Nielsen (dengmao@gmail.com)
+" Vim color file " Original Maintainer:  Lars H. Nielsen (dengmao@gmail.com)
 " Last Change:  2010-07-23
 "
 " Modified version of wombat for 256-color terminals by
