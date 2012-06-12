@@ -45,28 +45,19 @@ if has('gui_running')
   colorscheme wombat
   set background=dark
   else
-<<<<<<< HEAD
     set background=dark
     let g:solarized_termcolors=256
     colorscheme solarized
-=======
-    set t_Co=256
-    colorscheme wombat256mod
->>>>>>> work
 endif
 
-<<<<<<< HEAD
-=======
 " reload 
 command! -bar Cr silent ChromeReload
-
 
 " Show numbers to the side
 " set number
 
 " Interface / Highlighting
 
->>>>>>> 7655755bcdc8ec100de9cbc3408b7470418272d5
 "" Keep  a minimum of 7 lines above and below the cursor when possible
 let &scrolloff=7-&scrolloff
 
