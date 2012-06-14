@@ -55,7 +55,7 @@ if has('gui_running')
   else
     set background=dark
     set t_Co=256
-    colorscheme wombat256mod
+    colorscheme=wombat256mod
 endif
 
 " reload 
