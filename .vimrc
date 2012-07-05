@@ -22,6 +22,8 @@ syntax on
 filetype plugin on
 set nocompatible
 set number
+set hlsearch
+:noremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
 " Wildmenu autocompleting coolness
 set wildmenu
@@ -55,7 +57,7 @@ if has('gui_running')
   else
     set background=dark
     set t_Co=256
-    colorscheme=wombat256mod
+    colorscheme wombat256mod
 endif
 
 " reload 
