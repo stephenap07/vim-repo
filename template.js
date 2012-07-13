@@ -5,7 +5,7 @@
  * var row = {
  *  event_type : {
  *    type : "begin", 
- *    innerHTML : '<input type="hidden" name="duty_type1"' + 
+ *    element: '<input type="hidden" name="duty_type1"' + 
  *                'id="duty_type1"' + 
  *                'value="normal_service">' + 
  *                '<input type="hidden" name="event_type1"' + 
@@ -18,6 +18,7 @@
  *  date : "2012-07-10", 
  *  time : "08:00",
  *  legend : "T1"
+ *  errors : list of errors 
  * }
 */ 
 
@@ -30,45 +31,68 @@ var table = {
   rows   : [], 
 } 
 
-var currentRow = table.row.length + 1; 
-table.rows.push(getRow(duty_type;                                
-                       getEventTypeCell("normal_service", "begin"),
-                       getServiceTypeCell("normal_service", "begin"),
-                       getLocationCell("normal_service", "begin"),
-                       getDateCell("normal_service", "begin"),
-                       getTimeCell("normal_service", "begin"),
-                       getLegendCell("normal_service", "begin")
-                       ); 
-               ); 
+var currentRow = table.rows.length + 1; 
+
+function addRow(row, duty_type, event_type) {
+  table.rows.push(getRow(duty_type;                                
+                         getEventTypeCell(i, duty_type, event_type),
+                         getServiceTypeCell(i, duty_type, event_type),
+                         getLocationCell(i, duty_type, event_type),
+                         getDateCell(i, duty_type, event_type),
+                         getTimeCell(i, duty_type, event_type),
+                         getLegendCell(i, duty_type, event_type)
+                         ); 
+                 ); 
+}
 
 function getRow(duty_type, event_type,
-                service_type, location, 
-                date, time, legend) { 
+                service_type, loc, 
+                dt, time, legend) { 
   var row = {}; 
 
   row.duty_type     = duty_type;  
   row.event_type    = event_type;  
   row.service_type  = service_type;  
-  row.location      = location; 
-  row.date          = date;  
+  row.location      = loc; 
+  row.date          = dt; 
   row.time          = time;  
   row.legend        = legend;  
   
   return row; 
 }
 
-function getHiddenField(type, value) { 
-  var hidden  = '<input type="hidden" name="' + type + rows + '"' + 
-                'id="' + type + rows + '"' + 
-                'value="' + value + '">';
-  return hidden; 
+function getHiddenField(row, type, value) { 
+  var el = createElement('input'); 
+  el.type = 'hidden'; 
+  el.name = type + row; 
+  el.id = el.name; 
+  el.value = value; 
+  return el; 
 }
 
-function getEventTypeCell(duty_type, event_type) { 
+
+function getEventTypeCell(row, duty_type, event_type) { 
   event_obj = {}; 
   event.type = event_type; 
  
-  hidden_field;  
-  hidden_field2 = getHiddenField("duty_type", duty_type); 
+  hidden_field = getHiddenField(row, "duty_type", duty_type); 
+  // add other properties here, and attach to another node 
+}
+
+ 
+function getServiceTypeCell(row, duty_type, event_type) { 
+}
+
+function getLocationCell(row, duty_type, event_type) { 
+} 
+
+function getDateCell(row, duty_type, event_type) { 
 }
  
+function getTimeCell(row, duty_type, event_type) { 
+} 
+
+function getLegendCell(row, duty_type, event_type) { 
+} 
+
+
