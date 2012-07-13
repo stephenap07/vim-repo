@@ -22,28 +22,96 @@
  * }
 */ 
 
+/*
+ * $.each(buttons, function( propertyName, button ) { 
+ *  $('<button>', { 
+ *    html: button.label,
+ *    id: propertyName
+ *  })
+ *  .bind('click', button.action)
+ *  .appendTo( '
+ */
+
 function assertEquals(a, b) { 
   return a == b; 
+}
+
+var State = function(opts) { 
+  for(var attr in opts ) { 
+    if(opts.hasOwnProperty(attr)) { 
+      this[attr] = opts[attr]; 
+    }
+  }
+}; 
+State.prototype.trouble_ticket = function() {}
+State.prototype.normal_service = function() {}
+
+var event_state {
+  duty : "normal_service", 
+  service : { 
+              current : 0, 
+              0 : "Covered Service",  
+              1 : "Non-Covered Service"
+            }, 
+  begin : new State({
+    trouble_ticket : function() {
+      $("#off_duty_cell").hide(); 
+      $("#normal_service_call").show(); 
+      var hidden_field = "Begin Trouble Call" + getHiddenField("event_type", "begin_trouble_ticket"); 
+      this.currentDuty = "trouble_ticket"; 
+
+      return hidden_field; 
+    },
+    normal_service : function() {
+      $("#off_duty_cell").show(); 
+      $("#normal_service_call").hide(); 
+      var hidden_field = "Begin Normal Service" + getHiddenField("event_type", "begin_normal_service"); 
+      this.currentDuty = "normal_service"; 
+
+      return hidden_field; 
+    }
+  }),
+  // Seems to not rely on duty type? 
+  end : new State({
+    trouble_ticket : function() {
+
+      },
+    normal_service : function() {}
+  }),
+  switch_out_of_trouble : new State({
+    trouble_ticket : function() {},
+    normal_service : function() {}
+  }),
+  switch_ : new State({
+    trouble_ticket : function() {},
+    normal_service : function() {}
+  }),
+  interrupted : new State({
+    trouble_ticket : function() {},
+    normal_service : function() {}
+  }),
 }
 
 var table = { 
   name   : "scheduleTable", 
   rows   : [], 
+  addRow : function(duty_type, event_type) {
+             var _row = rows.length + 1; 
+             this.rows.push(getRow(duty_type,                                
+                                    getEventTypeCell(_row, event_state[event_type][duty_type]),
+                                    getServiceTypeCell(_row, event_state[event_type][duty_type]),
+                                    getLocationCell(_row, event_state[event_type][duty_type]),
+                                    getDateCell(_row, event_state[event_type][duty_type]),
+                                    getTimeCell(_row, event_state[event_type][duty_type]),
+                                    getLegendCell(_row, event_state[event_type][duty_type])
+                                    ); 
+                            ); 
+           }
 } 
 
-var currentRow = table.rows.length + 1; 
 
-function addRow(row, duty_type, event_type) {
-  table.rows.push(getRow(duty_type;                                
-                         getEventTypeCell(i, duty_type, event_type),
-                         getServiceTypeCell(i, duty_type, event_type),
-                         getLocationCell(i, duty_type, event_type),
-                         getDateCell(i, duty_type, event_type),
-                         getTimeCell(i, duty_type, event_type),
-                         getLegendCell(i, duty_type, event_type)
-                         ); 
-                 ); 
-}
+
+var currentRow = table.rows.length + 1; 
 
 function getRow(duty_type, event_type,
                 service_type, loc, 
