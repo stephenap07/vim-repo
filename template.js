@@ -46,6 +46,9 @@ var State = function(opts) {
 State.prototype.trouble_ticket = function() {}
 State.prototype.normal_service = function() {}
 
+// This isn't functional 
+// But could still be the point of entry 
+// Might be the model 
 var event_state {
   duty : "normal_service", 
   service : { 
@@ -58,7 +61,7 @@ var event_state {
       $("#off_duty_cell").hide(); 
       $("#normal_service_call").show(); 
       var hidden_field = "Begin Trouble Call" + getHiddenField("event_type", "begin_trouble_ticket"); 
-      this.currentDuty = "trouble_ticket"; 
+      this.duty = "trouble_ticket"; 
 
       return hidden_field; 
     },
@@ -66,7 +69,7 @@ var event_state {
       $("#off_duty_cell").show(); 
       $("#normal_service_call").hide(); 
       var hidden_field = "Begin Normal Service" + getHiddenField("event_type", "begin_normal_service"); 
-      this.currentDuty = "normal_service"; 
+      this.duty = "normal_service"; 
 
       return hidden_field; 
     }
@@ -90,6 +93,17 @@ var event_state {
     trouble_ticket : function() {},
     normal_service : function() {}
   }),
+};
+
+//2nd way of doing event_state
+function duty_event(event_type, duty_type) { 
+  var obj = { 
+    off_duty : false, 
+    normal_service : true, 
+    duty : duty_type, 
+    event_type : event_type,
+  };
+  return obj; 
 }
 
 var table = { 
