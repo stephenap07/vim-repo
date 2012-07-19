@@ -1,7 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/opt/DOCS/common/pmlib/DOCS/Customer'
 let g:netrw_dirhist_2='/opt/DOCS/common/pmlib/DOCS/MilepostFormatter'
 let g:netrw_dirhist_3='/imports/home/spridham/vim-repo/.vim/colors'
 let g:netrw_dirhist_4='/opt/hg/raildocs_py/raildocs_py'
 let g:netrw_dirhist_5='/opt/DOCS/common/pmlib/DOCS/Customer'
+let g:netrw_dirhist_6='/opt/DOCS/common/app/hos/priv/templates/days_off'
+let g:netrw_dirhist_7='/imports/home/spridham/vim-repo/.vim/bundle/xolox-vim-notes-8881d41'
+let g:netrw_dirhist_8='/imports/home/spridham/vim-repo/.vim/bundle/xptemplate'
