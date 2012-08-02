@@ -25,9 +25,9 @@ set number
 set hlsearch
 :noremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
-" Smooth scrolling
-:map <C-U> <C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y>
-:map <C-D> <C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E>
+" Auto-correct
+:ab teh the
+:ab fro for 
 
 " Wildmenu autocompleting coolness
 set wildmenu
